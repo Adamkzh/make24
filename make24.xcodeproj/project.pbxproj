@@ -14,6 +14,9 @@
 		669A4619209BBF1600860049 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 669A4617209BBF1600860049 /* LaunchScreen.storyboard */; };
 		669A4624209BBF1600860049 /* make24Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A4623209BBF1600860049 /* make24Tests.swift */; };
 		669A462F209BBF1600860049 /* make24UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A462E209BBF1600860049 /* make24UITests.swift */; };
+		70B93D5B613E47EE9CBC08D0 /* Pods_make24Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA40DCEDCD4F6C00404D491 /* Pods_make24Tests.framework */; };
+		982DED1E06B75A4660D3E702 /* Pods_make24.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50696BA6B3B7D7A7114A4DE3 /* Pods_make24.framework */; };
+		B5D3CFD16E31505A887038CD /* Pods_make24UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B2D08D12BBBB423B8CE4AB2 /* Pods_make24UITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A77000598AA7214EAD6545F /* Pods-make24UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-make24UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-make24UITests/Pods-make24UITests.release.xcconfig"; sourceTree = "<group>"; };
+		15C17867AD0AE96B4A9CA5BE /* Pods-make24Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-make24Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-make24Tests/Pods-make24Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		1D06AB7F2B960E8BF7364E15 /* Pods-make24.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-make24.release.xcconfig"; path = "Pods/Target Support Files/Pods-make24/Pods-make24.release.xcconfig"; sourceTree = "<group>"; };
+		2270DC33D6525D33DAEA21E2 /* Pods-make24UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-make24UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-make24UITests/Pods-make24UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		24BD2FC97FDACA9FD1E7AABE /* Pods-make24.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-make24.debug.xcconfig"; path = "Pods/Target Support Files/Pods-make24/Pods-make24.debug.xcconfig"; sourceTree = "<group>"; };
+		3BEB3CFCDE3EE69A4E0C17B5 /* Pods-make24Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-make24Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-make24Tests/Pods-make24Tests.release.xcconfig"; sourceTree = "<group>"; };
+		50696BA6B3B7D7A7114A4DE3 /* Pods_make24.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_make24.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		669A460B209BBF1400860049 /* make24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = make24.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669A460E209BBF1400860049 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		669A4610209BBF1400860049 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,8 @@
 		669A462A209BBF1600860049 /* make24UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = make24UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		669A462E209BBF1600860049 /* make24UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = make24UITests.swift; sourceTree = "<group>"; };
 		669A4630209BBF1600860049 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B2D08D12BBBB423B8CE4AB2 /* Pods_make24UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_make24UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CA40DCEDCD4F6C00404D491 /* Pods_make24Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_make24Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				982DED1E06B75A4660D3E702 /* Pods_make24.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70B93D5B613E47EE9CBC08D0 /* Pods_make24Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D3CFD16E31505A887038CD /* Pods_make24UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		432F652F89895D77B8D274B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				24BD2FC97FDACA9FD1E7AABE /* Pods-make24.debug.xcconfig */,
+				1D06AB7F2B960E8BF7364E15 /* Pods-make24.release.xcconfig */,
+				15C17867AD0AE96B4A9CA5BE /* Pods-make24Tests.debug.xcconfig */,
+				3BEB3CFCDE3EE69A4E0C17B5 /* Pods-make24Tests.release.xcconfig */,
+				2270DC33D6525D33DAEA21E2 /* Pods-make24UITests.debug.xcconfig */,
+				0A77000598AA7214EAD6545F /* Pods-make24UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		669A4602209BBF1400860049 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +109,8 @@
 				669A4622209BBF1600860049 /* make24Tests */,
 				669A462D209BBF1600860049 /* make24UITests */,
 				669A460C209BBF1400860049 /* Products */,
+				432F652F89895D77B8D274B6 /* Pods */,
+				B50919A364726A3C7FAA60F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +155,16 @@
 			path = make24UITests;
 			sourceTree = "<group>";
 		};
+		B50919A364726A3C7FAA60F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50696BA6B3B7D7A7114A4DE3 /* Pods_make24.framework */,
+				8CA40DCEDCD4F6C00404D491 /* Pods_make24Tests.framework */,
+				8B2D08D12BBBB423B8CE4AB2 /* Pods_make24UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 669A4633209BBF1600860049 /* Build configuration list for PBXNativeTarget "make24" */;
 			buildPhases = (
+				4416B0D2169F3BB3C38C6089 /* [CP] Check Pods Manifest.lock */,
 				669A4607209BBF1400860049 /* Sources */,
 				669A4608209BBF1400860049 /* Frameworks */,
 				669A4609209BBF1400860049 /* Resources */,
+				D6CE6885183136407E4F782A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +191,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 669A4636209BBF1600860049 /* Build configuration list for PBXNativeTarget "make24Tests" */;
 			buildPhases = (
+				EFC591AA90AA26BEF6F4922D /* [CP] Check Pods Manifest.lock */,
 				669A461B209BBF1600860049 /* Sources */,
 				669A461C209BBF1600860049 /* Frameworks */,
 				669A461D209BBF1600860049 /* Resources */,
@@ -167,6 +210,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 669A4639209BBF1600860049 /* Build configuration list for PBXNativeTarget "make24UITests" */;
 			buildPhases = (
+				157594C1EE2F410858874BDE /* [CP] Check Pods Manifest.lock */,
 				669A4626209BBF1600860049 /* Sources */,
 				669A4627209BBF1600860049 /* Frameworks */,
 				669A4628209BBF1600860049 /* Resources */,
@@ -250,6 +294,85 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		157594C1EE2F410858874BDE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-make24UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4416B0D2169F3BB3C38C6089 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-make24-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6CE6885183136407E4F782A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-make24/Pods-make24-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotificationBannerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-make24/Pods-make24-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFC591AA90AA26BEF6F4922D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-make24Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		669A4607209BBF1400860049 /* Sources */ = {
@@ -428,14 +551,12 @@
 		};
 		669A4634209BBF1600860049 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24BD2FC97FDACA9FD1E7AABE /* Pods-make24.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = make24/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = adam.make24;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -445,14 +566,12 @@
 		};
 		669A4635209BBF1600860049 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D06AB7F2B960E8BF7364E15 /* Pods-make24.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = make24/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = adam.make24;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -462,16 +581,13 @@
 		};
 		669A4637209BBF1600860049 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15C17867AD0AE96B4A9CA5BE /* Pods-make24Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = make24Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = adam.make24Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -482,16 +598,13 @@
 		};
 		669A4638209BBF1600860049 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BEB3CFCDE3EE69A4E0C17B5 /* Pods-make24Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = make24Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = adam.make24Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -502,15 +615,12 @@
 		};
 		669A463A209BBF1600860049 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2270DC33D6525D33DAEA21E2 /* Pods-make24UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = make24UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = adam.make24UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -521,15 +631,12 @@
 		};
 		669A463B209BBF1600860049 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A77000598AA7214EAD6545F /* Pods-make24UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = make24UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = adam.make24UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

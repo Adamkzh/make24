@@ -1,0 +1,6 @@
+framework module Pods_make24Tests {
+  umbrella header "Pods-make24Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

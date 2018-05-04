@@ -178,6 +178,32 @@ class ViewController: UIViewController {
         btnNum4.isEnabled = true
         btnDone.isEnabled = false
     }
+    
+    
+    @IBAction func skipBtn(_ sender: UIBarButtonItem) {
+        attemptTimesNum = 1
+        attempTimes.text = String(attemptTimesNum)
+        skippedTimesNum += 1
+        skippedTimes.text = String(skippedTimesNum)
+        generateRandomNumber()
+        assignNumber()
+    }
+    
+    @IBAction func showAnswer(_ sender: UIBarButtonItem) {
+        let result = getSolution(a: num1, b: num2, c: num3, d: num4)
+        if result.isEmpty == false {
+            Alert(title: "Solution", message: result, action: "OK")
+        } else {
+            Alert(title: "Solution", message: "Sorry, there are actually no solutions!", action: "OK")
+        }
+
+        attemptTimesNum = 1
+        attempTimes.text = String(attemptTimesNum)
+        skippedTimesNum += 1
+        skippedTimes.text = String(skippedTimesNum)
+    }
+    
+    
     @IBAction func numberPressed(_ sender: UIButton) {
         print("im in")
         btnDone.isEnabled = true

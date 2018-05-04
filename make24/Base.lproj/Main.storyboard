@@ -209,9 +209,15 @@
                         </barButtonItem>
                         <barButtonItem title="3" image="next" largeContentSizeImage="I" width="115" style="plain" id="pWZ-Q8-5oi">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="skipBtn:" destination="BYZ-38-t0r" id="TdQ-xQ-wf8"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem title="Item" image="answer" id="uGV-dW-7jo">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="showAnswer:" destination="BYZ-38-t0r" id="ZeK-oA-QA0"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem title="4" image="assign" style="plain" id="Xrw-KE-YTd">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

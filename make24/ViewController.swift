@@ -55,6 +55,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var expressionArea: UILabel!
     
+    
     var expression = ""
     var result = ""
     var timer = Timer()
@@ -168,6 +169,15 @@ class ViewController: UIViewController {
         return abs(x - Des) < 0.0000001
     }
     
+    @IBAction func clearBtn(_ sender: UIBarButtonItem) {
+        expression = ""
+        expressionArea.text = expression
+        btnNum1.isEnabled = true
+        btnNum2.isEnabled = true
+        btnNum3.isEnabled = true
+        btnNum4.isEnabled = true
+        btnDone.isEnabled = false
+    }
     @IBAction func numberPressed(_ sender: UIButton) {
         print("im in")
         btnDone.isEnabled = true

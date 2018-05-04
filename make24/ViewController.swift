@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 public struct Stack<T> {
     fileprivate var array = [T]()
     
@@ -50,6 +52,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var timeCount: UILabel!
     @IBOutlet weak var succeededTimes: UILabel!
     @IBOutlet weak var skippedTimes: UILabel!
+    @IBOutlet weak var attempTimes: UILabel!
     
     @IBOutlet weak var expressionArea: UILabel!
     
@@ -187,6 +190,194 @@ class ViewController: UIViewController {
             expression += ""
         }
         expressionArea.text = expression
+    }
+    @IBAction func addPressed(_ sender: UIButton) {
+        expression += "+"
+        expressionArea.text = expression
+    }
+    
+    @IBAction func subtractPressed(_ sender: UIButton) {
+        expression += "-"
+        expressionArea.text = expression
+    }
+    
+    @IBAction func multiplyPressed(_ sender: UIButton) {
+        expression += "×"
+        expressionArea.text = expression
+    }
+    
+    @IBAction func dividePressed(_ sender: UIButton) {
+        expression += "÷"
+        expressionArea.text = expression
+    }
+    
+    @IBAction func leftPressed(_ sender: UIButton) {
+        expression += "("
+        expressionArea.text = expression
+    }
+    
+    @IBAction func rightPressed(_ sender: UIButton) {
+        expression += ")"
+        expressionArea.text = expression
+    }
+    @IBAction func delPressed(_ sender: UIButton) {
+        if expression.isEmpty == false{
+            if expression.count == 1 {
+                btnDone.isEnabled = false
+            }
+            let lastChar = expression.last!
+            if lastChar >= "1" && lastChar <= "9" {
+                let deletedDigit = Double(String(lastChar))
+                if btnNum1.isEnabled == false && deletedDigit == num1{
+                    btnNum1.isEnabled = true
+                }else if btnNum2.isEnabled == false && deletedDigit == num2 {
+                    btnNum2.isEnabled = true
+                }else if btnNum3.isEnabled == false && deletedDigit == num3 {
+                    btnNum3.isEnabled = true
+                }else if btnNum4.isEnabled == false && deletedDigit == num4 {
+                    btnNum4.isEnabled = true
+                }
+                
+            }
+            expression.remove(at: expression.index(before: expression.endIndex))
+            expressionArea.text = expression
+        }
+        
+    }
+    
+    @IBAction func donePressed(_ sender: UIButton) {
+        
+        attemptTimesNum += 1
+        attempTimes.text = String(attemptTimesNum)
+        
+        let isRight = calculateResult()
+        if isRight == true && btnNum1.isEnabled == false && btnNum2.isEnabled == false && btnNum3.isEnabled == false && btnNum4.isEnabled == false {
+            Alert(title: "Succeed!", message: "Bingo! \(expression) = 24", action: "Next Puzzle")
+            successCountNum += 1
+            succeededTimes.text = String(successCountNum)
+            attemptTimesNum = 1
+            attempTimes.text = String(attemptTimesNum)
+        }else {
+            let snackbar = TTGSnackbar(message: "Incorrect. Please try again!", duration: .middle)
+            snackbar.show()
+        }
+    }
+    
+    
+    func Alert(title: String, message: String, action: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: action, style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            self.generateRandomNumber()
+            self.assignNumber()
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    func calculateResult() -> Bool {
+        let postExpression = convertToPostFix(input: expression)
+        let result = calculate(input: postExpression)
+        return bingo(x: result)
+    }
+    
+    func calculate(input: String) -> Double {
+        var stack = Stack<Double>()
+        var d1:Double = 0
+        var d2:Double = 0
+        var d3:Double = 0
+        for i in 0..<input.count {
+            let ch = Array(input)[i]
+            if ch >= "0" && ch <= "9" {
+                stack.push(Double(String(ch))!)
+            }
+            else {
+                if stack.isEmpty == false {
+                    d2 = stack.pop()!
+                }
+                if stack.isEmpty == false {
+                    d1 = stack.pop()!
+                }
+                switch ch {
+                case "+":
+                    d3 = d1 + d2
+                case "-":
+                    d3 = d1 - d2
+                case "×":
+                    d3 = d1 * d2
+                default:
+                    d3 = d1 / d2
+                }
+                stack.push(d3)
+            }
+        }
+        return stack.pop()!
+    }
+    
+    
+    func convertToPostFix(input: String) -> String {
+        var stringBuilder = ""
+        var operatorStack = Stack<Character>()
+        let length = input.count
+        for i in 0..<length {
+            let ch = Array(input)[i]
+            print("ch: \(ch)")
+            if ch >= "0" && ch <= "9" {
+                stringBuilder += String(ch)
+            }
+            //left bracket
+            if ch == "(" {
+                operatorStack.push(ch)
+            }
+            //operator
+            if isOperator(op: ch) {
+                if operatorStack.isEmpty == true {
+                    operatorStack.push(ch)
+                }
+                else {
+                    var stackTop = operatorStack.top
+                    if priority(ch: ch) > priority(ch: stackTop!) {
+                        operatorStack.push(ch)
+                    }
+                    else {
+                        stackTop = operatorStack.pop()
+                        stringBuilder += String(stackTop!)
+                        operatorStack.push(ch)
+                    }
+                    
+                }
+            }
+            
+            //right bracket
+            if ch == ")" {
+                var top = operatorStack.pop()
+                while top != "(" {
+                    stringBuilder += String(top!)
+                    top = operatorStack.pop()
+                }
+            }
+            
+        }
+        while operatorStack.isEmpty == false {
+            stringBuilder += String(operatorStack.pop()!)
+        }
+        //print(stringBuilder)
+        return stringBuilder
+    }
+    
+    
+    func isOperator(op: Character) -> Bool {
+        return (op == "+") || (op == "-") || (op == "×") || (op == "÷")
+    }
+    
+    func priority(ch: Character) -> Int {
+        if ch == "+" || ch == "-" {
+            return 1
+        }
+        if ch == "×" || ch == "÷" {
+            return 2
+        }
+        return 0
     }
     
     

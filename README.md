@@ -1,5 +1,5 @@
 # make24
-using 4 numbers to get 24 game (IOS)
+using 4 numbers get 24 game (IOS) 
 
 
 # Hell Yes!

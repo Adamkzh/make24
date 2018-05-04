@@ -7,8 +7,7 @@
 //
 
 import UIKit
-
-
+import NotificationBannerSwift
 
 public struct Stack<T> {
     fileprivate var array = [T]()
@@ -258,8 +257,8 @@ class ViewController: UIViewController {
             attemptTimesNum = 1
             attempTimes.text = String(attemptTimesNum)
         }else {
-            let snackbar = TTGSnackbar(message: "Incorrect. Please try again!", duration: .middle)
-            snackbar.show()
+            let banner = NotificationBanner(title: "Wrong Answer!", subtitle: "Please Try Again!", style: .danger)
+            banner.show()
         }
     }
     
@@ -321,7 +320,6 @@ class ViewController: UIViewController {
         let length = input.count
         for i in 0..<length {
             let ch = Array(input)[i]
-            print("ch: \(ch)")
             if ch >= "0" && ch <= "9" {
                 stringBuilder += String(ch)
             }
@@ -361,7 +359,6 @@ class ViewController: UIViewController {
         while operatorStack.isEmpty == false {
             stringBuilder += String(operatorStack.pop()!)
         }
-        //print(stringBuilder)
         return stringBuilder
     }
     

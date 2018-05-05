@@ -180,13 +180,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="(7 + 8) - 3" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bap-MC-HLN">
-                                <rect key="frame" x="42" y="258" width="291" height="131"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omo-MR-r8o">
                                 <rect key="frame" x="16" y="435" width="79" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -196,6 +189,13 @@
                                     <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OOh-6w-JQf"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="(7 + 8) - 3" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bap-MC-HLN">
+                                <rect key="frame" x="42" y="249" width="291" height="131"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -222,7 +222,7 @@
                         <barButtonItem title="4" image="assign" style="plain" id="Xrw-KE-YTd">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="Onu-HL-Yvp" kind="push" id="jnd-kg-AhE"/>
+                                <segue destination="PDZ-QI-SA5" kind="push" id="P9g-IU-vmO"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
@@ -236,7 +236,7 @@
                         <outlet property="btnNum2" destination="VPf-Wt-O9t" id="KfO-Y3-oCK"/>
                         <outlet property="btnNum3" destination="EP6-O4-Knc" id="Qja-3u-mhH"/>
                         <outlet property="btnNum4" destination="aa2-e9-AAQ" id="7Wk-Le-Hq4"/>
-                        <outlet property="expressionArea" destination="bap-MC-HLN" id="4kr-dV-ERo"/>
+                        <outlet property="expressionArea" destination="bap-MC-HLN" id="Fu9-kW-cPQ"/>
                         <outlet property="skippedTimes" destination="rw7-5S-h6R" id="MmJ-Lp-ETs"/>
                         <outlet property="succeededTimes" destination="xTQ-gz-TPe" id="ihk-q9-UDg"/>
                         <outlet property="timeCount" destination="bVs-aQ-8Eg" id="gxz-wL-Ace"/>
@@ -247,26 +247,60 @@
             <point key="canvasLocation" x="87" y="37"/>
         </scene>
         <!--Picker Controller-->
-        <scene sceneID="j5n-GA-0Ef">
+        <scene sceneID="fIS-D6-1e0">
             <objects>
-                <viewController id="Onu-HL-Yvp" customClass="PickerController" customModule="make24" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dSz-6y-r93">
+                <viewController id="PDZ-QI-SA5" customClass="PickerController" customModule="make24" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iAA-rr-61T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kMz-4t-5tl">
-                                <rect key="frame" x="0.0" y="225" width="109" height="153"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyY-gI-Bpx">
+                                <rect key="frame" x="84" y="537" width="85" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="push" id="oLa-8j-oow"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUc-D4-1lH">
+                                <rect key="frame" x="250" y="537" width="36" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Go"/>
+                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dae-8e-ea1">
+                                <rect key="frame" x="21" y="250" width="84" height="82"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n5G-Ea-Hlk">
+                                <rect key="frame" x="104" y="250" width="84" height="82"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rT0-KS-Ofi">
+                                <rect key="frame" x="188" y="250" width="84" height="82"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YaL-O6-sQY">
+                                <rect key="frame" x="270" y="250" width="84" height="82"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Pick Your Number" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eF3-In-LCL">
+                                <rect key="frame" x="66" y="106" width="243" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="FUh-9c-2X5"/>
+                        <viewLayoutGuide key="safeArea" id="nRs-vm-Aqq"/>
                     </view>
-                    <navigationItem key="navigationItem" id="eRG-76-7pu"/>
+                    <navigationItem key="navigationItem" id="C9n-tt-Wf1"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EGB-Wv-1ut" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Byv-bh-cXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896.79999999999995" y="36.945812807881772"/>
+            <point key="canvasLocation" x="968.79999999999995" y="34.729064039408868"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="44u-oU-5D7">
@@ -299,5 +333,8 @@
         <image name="cross" width="50" height="50"/>
         <image name="next" width="100" height="100"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="oLa-8j-oow"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

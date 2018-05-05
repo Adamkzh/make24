@@ -7,8 +7,8 @@
 //
 
 import Foundation
+import UIKit
 
-
-class PickerController: ViewController{
+class PickerController: UIViewController {
     
 }

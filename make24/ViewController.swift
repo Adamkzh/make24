@@ -53,7 +53,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var skippedTimes: UILabel!
     @IBOutlet weak var attempTimes: UILabel!
     
-    @IBOutlet weak var expressionArea: UILabel!
+    @IBOutlet weak var expressionArea: UITextView!
+    
     
     
     var expression = ""

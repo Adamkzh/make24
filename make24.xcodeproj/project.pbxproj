@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66210AF8209D39D600D86D4E /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66210AF7209D39D600D86D4E /* PickerViewController.swift */; };
 		669A460F209BBF1400860049 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A460E209BBF1400860049 /* AppDelegate.swift */; };
 		669A4611209BBF1400860049 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A4610209BBF1400860049 /* ViewController.swift */; };
 		669A4614209BBF1400860049 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 669A4612209BBF1400860049 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		24BD2FC97FDACA9FD1E7AABE /* Pods-make24.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-make24.debug.xcconfig"; path = "Pods/Target Support Files/Pods-make24/Pods-make24.debug.xcconfig"; sourceTree = "<group>"; };
 		3BEB3CFCDE3EE69A4E0C17B5 /* Pods-make24Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-make24Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-make24Tests/Pods-make24Tests.release.xcconfig"; sourceTree = "<group>"; };
 		50696BA6B3B7D7A7114A4DE3 /* Pods_make24.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_make24.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66210AF7209D39D600D86D4E /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		669A460B209BBF1400860049 /* make24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = make24.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669A460E209BBF1400860049 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		669A4610209BBF1400860049 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				669A4615209BBF1600860049 /* Assets.xcassets */,
 				669A4617209BBF1600860049 /* LaunchScreen.storyboard */,
 				669A461A209BBF1600860049 /* Info.plist */,
+				66210AF7209D39D600D86D4E /* PickerViewController.swift */,
 			);
 			path = make24;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66210AF8209D39D600D86D4E /* PickerViewController.swift in Sources */,
 				669A4611209BBF1400860049 /* ViewController.swift in Sources */,
 				669A460F209BBF1400860049 /* AppDelegate.swift in Sources */,
 			);
@@ -556,7 +560,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = make24/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = adam.make24;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -571,7 +578,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = make24/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = adam.make24;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -587,7 +597,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = make24Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = adam.make24Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -604,7 +618,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = make24Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = adam.make24Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -620,7 +638,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = make24UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = adam.make24UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -636,7 +658,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = make24UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = adam.make24UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

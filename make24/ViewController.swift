@@ -39,6 +39,11 @@ var num2:Double = 0
 var num3:Double = 0
 var num4:Double = 0
 
+
+var attemptTimesNum = 0
+var skippedTimesNum = 0
+var successCountNum = 0
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var btnNum1: UIButton!
@@ -63,15 +68,9 @@ class ViewController: UIViewController {
     var timeCountNum = 0
     
     
-    var attemptTimesNum = 0
-    var skippedTimesNum = 0
-    var successCountNum = 0
-    
+
     let Des:Double = 24
     
-    
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
